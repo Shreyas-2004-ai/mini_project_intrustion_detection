@@ -1,0 +1,28 @@
+# Raw and processed data — never commit large CSV files or fitted pipelines
+data/raw/
+data/processed/
+data/data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
