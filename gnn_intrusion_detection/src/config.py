@@ -45,3 +45,37 @@ ATTACK_CATEGORIES = [
 EXPECTED_TRAIN_ROWS = 175_341
 EXPECTED_TEST_ROWS  =  82_332
 EXPECTED_COLS       =  45
+
+# ── Graph construction settings ───────────────────────────────────────────────
+
+# Window size: number of consecutive flow records per graph
+GRAPH_WINDOW_SIZE = 100
+
+# k for k-nearest-neighbour edge construction (configurable; default = 5)
+# Must be one of the supported values: 3, 5, 10
+GRAPH_K = 5
+
+# The 8 ct_* features used ONLY for cosine-similarity edge construction.
+# These encode neighbourhood statistics and are the closest proxy for
+# network topology available in UNSW-NB15 (no srcip/dstip present).
+# They are also kept as node features — they encode structural context.
+CT_EDGE_FEATURES = [
+    "ct_srv_src",
+    "ct_srv_dst",
+    "ct_src_ltm",
+    "ct_dst_ltm",
+    "ct_dst_src_ltm",
+    "ct_src_dport_ltm",
+    "ct_dst_sport_ltm",
+    "ct_state_ttl",
+]
+
+# Output directories for serialised PyG graph datasets
+GRAPHS_DIR       = PROCESSED_DIR / "graphs"
+TRAIN_GRAPHS_DIR = GRAPHS_DIR / "train"
+TEST_GRAPHS_DIR  = GRAPHS_DIR / "test"
+
+# Statistics output paths
+TRAIN_GRAPH_STATS_PATH = GRAPHS_DIR / "train_graph_stats.csv"
+TEST_GRAPH_STATS_PATH  = GRAPHS_DIR / "test_graph_stats.csv"
+OVERALL_STATS_PATH     = GRAPHS_DIR / "overall_stats.json"
