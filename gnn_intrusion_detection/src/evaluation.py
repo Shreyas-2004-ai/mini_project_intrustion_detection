@@ -83,9 +83,10 @@ def compute_metrics(
     prec = precision_score(labels, preds, zero_division=0)
     rec  = recall_score(labels, preds, zero_division=0)
     f1   = f1_score(labels, preds, zero_division=0)
-    cm   = confusion_matrix(labels, preds).tolist()
+    cm   = confusion_matrix(labels, preds, labels=[0, 1]).tolist()
     cr   = classification_report(
         labels, preds,
+        labels=[0, 1],
         target_names=["Normal (0)", "Attack (1)"],
         zero_division=0,
     )
