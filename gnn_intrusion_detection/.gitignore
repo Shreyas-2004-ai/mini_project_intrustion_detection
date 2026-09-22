@@ -3,6 +3,16 @@ data/raw/
 data/processed/
 data/data/
 
+# Trained model weights
+models/*.pt
+models/*.pth
+
+# Result artefacts (PNGs, CSVs, JSONs) — keep .gitkeep placeholders
+results/gnn/*.png
+results/gnn/*.csv
+results/gnn/*.json
+results/gnn/*.txt
+
 # Python
 __pycache__/
 *.py[cod]
