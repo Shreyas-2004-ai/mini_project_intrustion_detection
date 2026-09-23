@@ -1,0 +1,29 @@
+[
+  {
+    "experiment": "A \u2014 Original graph (k=5 cosine-similarity)",
+    "graph_structure": "k=5 cosine-similarity k-NN",
+    "accuracy": 0.8813,
+    "precision": 0.8452,
+    "recall": 0.9604,
+    "f1": 0.8991,
+    "best_val_f1": 0.9601
+  },
+  {
+    "experiment": "B \u2014 No-message graph (no edges)",
+    "graph_structure": "No edges (node features only)",
+    "accuracy": 0.8398,
+    "precision": 0.791,
+    "recall": 0.9636,
+    "f1": 0.8688,
+    "best_val_f1": 0.9511
+  },
+  {
+    "experiment": "C \u2014 Random graph (random rewiring)",
+    "graph_structure": "Random rewiring (same edge count)",
+    "accuracy": 0.9487,
+    "precision": 0.9318,
+    "recall": 0.9785,
+    "f1": 0.9546,
+    "best_val_f1": 0.9731
+  }
+]
