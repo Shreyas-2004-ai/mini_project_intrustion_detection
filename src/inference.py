@@ -363,4 +363,5 @@ def predict_csv(
         "summary":       summary,
         "n_graphs":      len(graphs),
         "n_flows":       n_flows,
+        "graphs":        graphs,  # Return actual PyG Data objects for graph viz
     }

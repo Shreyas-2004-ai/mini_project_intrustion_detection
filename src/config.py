@@ -79,3 +79,51 @@ TEST_GRAPHS_DIR  = GRAPHS_DIR / "test"
 TRAIN_GRAPH_STATS_PATH = GRAPHS_DIR / "train_graph_stats.csv"
 TEST_GRAPH_STATS_PATH  = GRAPHS_DIR / "test_graph_stats.csv"
 OVERALL_STATS_PATH     = GRAPHS_DIR / "overall_stats.json"
+
+# ── GNN model settings ────────────────────────────────────────────────────────
+
+# Input feature dimension — 42 preprocessed features per node
+GNN_INPUT_DIM = 42
+
+# Binary classification: Normal=0 / Attack=1
+GNN_NUM_CLASSES = 2
+
+MODELS_DIR  = PROJECT_ROOT / "models"
+RESULTS_DIR = PROJECT_ROOT / "results" / "gnn"
+
+# Default GraphSAGE hyperparameters — all overridable via CLI
+GNN_DEFAULTS = {
+    "hidden_dim":   64,
+    "num_layers":   2,
+    "dropout":      0.3,
+    "lr":           1e-3,
+    "weight_decay": 1e-4,
+    "epochs":       50,
+    "batch_size":   32,
+    "seed":         42,
+    "val_split":    0.15,
+}
+
+# ── GNN model settings ────────────────────────────────────────────────────────
+
+# Input feature dimension — 42 preprocessed features per node
+GNN_INPUT_DIM = 42
+
+# Binary classification: Normal=0 / Attack=1
+GNN_NUM_CLASSES = 2
+
+MODELS_DIR  = PROJECT_ROOT / "models"
+RESULTS_DIR = PROJECT_ROOT / "results" / "gnn"
+
+# Default GraphSAGE hyperparameters — all overridable via CLI
+GNN_DEFAULTS = {
+    "hidden_dim":   64,
+    "num_layers":   2,
+    "dropout":      0.3,
+    "lr":           1e-3,
+    "weight_decay": 1e-4,
+    "epochs":       50,
+    "batch_size":   32,
+    "seed":         42,
+    "val_split":    0.15,
+}
