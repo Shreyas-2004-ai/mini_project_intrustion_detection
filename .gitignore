@@ -36,3 +36,30 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Frontend build artefacts and dependencies
+frontend/node_modules/
+frontend/dist/
+
+# Debug / scratch scripts (not part of the published codebase)
+debug_*.py
+inspect_*.py
+evaluate_*.py
+compare_*.py
+probe_*.py
+verify_*.py
+
+# Temporary test CSVs generated during development
+test_*.csv
+test_01_*.csv
+
+# Ad-hoc test / integration scripts (kept in tests/ only)
+test_api_response.py
+test_api_integration.py
+test_backend_response.py
+test_complete_system.py
+test_graph_api.py
+test_graph_fix.py
+test_graph_improved.py
+test_graph_integration.py
+create_test_csv.py
