@@ -6,6 +6,7 @@ data/data/
 # Trained model weights
 models/*.pt
 models/*.pth
+models/*.pkl
 
 # Result artefacts (PNGs, CSVs, JSONs) — keep .gitkeep placeholders
 results/gnn/*.png
